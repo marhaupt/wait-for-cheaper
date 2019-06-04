@@ -1,0 +1,32 @@
+{
+  "name": "wait-for-cheaper",
+  "version": "1.0.0",
+  "description": "watch for prize drop",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsonio/wait-for-cheaper.git"
+  },
+  "author": "Martin Haupt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonio/wait-for-cheaper/issues"
+  },
+  "homepage": "https://github.com/nelsonio/wait-for-cheaper#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.17.1"
+  }
+}
