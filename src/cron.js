@@ -55,12 +55,17 @@ const firebaseConfig = {
 };
 
 const main = () => {
+  console.log(firebaseConfig);
   firebase.initializeApp(firebaseConfig);
+  console.log(59, 'ok');
   const database = firebase.database();
+  console.log(61, 'ok');
   const stuffRef = database.ref('stuff');
+  console.log(63, 'ok');
 
   stuffRef.once('value', snapshot => {
     const list = snapshot.val();
+    console.log(list);
     const prices = list.map(thing => checkOne(thing));
 
     Promise.all(prices)
