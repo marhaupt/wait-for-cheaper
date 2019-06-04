@@ -1,4 +1,3 @@
-const express = require('express');
 require('dotenv').config();
 const firebase = require('firebase');
 
@@ -55,32 +54,23 @@ const firebaseConfig = {
   appId: process.env.APP_ID,
 };
 
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-const stuffRef = database.ref('stuff');
+const main = () => {
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+  const stuffRef = database.ref('stuff');
 
-let list = [];
+  stuffRef.once('value', snapshot => {
+    const list = snapshot.val();
+    const prices = list.map(thing => checkOne(thing));
 
-stuffRef.once('value', snapshot => {
-  list = snapshot.val();
-});
+    Promise.all(prices)
+      .then(done => {
+        stuffRef.set({ ...done });
+        console.log('Updated...');
+        process.exit();
+      })
+      .catch(error => console.error(error));
+  });
+};
 
-const app = express();
-
-const port = process.env.PORT || 3131;
-
-app.get('/', (req, res) => {
-  const prices = list.map(thing => checkOne(thing));
-
-  Promise.all(prices)
-    .then(done => {
-      list = done;
-      stuffRef.set({ ...done });
-      res.json(done);
-    })
-    .catch(error => console.error(error));
-});
-
-app.listen(port, () =>
-  console.log(`Listening @ port http://localhost:${port}`)
-);
+main();
