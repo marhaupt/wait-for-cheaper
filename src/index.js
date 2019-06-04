@@ -17,11 +17,32 @@ const scrape = html => {
   return price;
 };
 
-const checkOne = async item => {
-  const html = await rp(item.url);
+const simplifyPrices = prices => {
+  const keys = Object.keys(prices);
+  const values = Object.values(prices);
+  const length = keys.length;
+
+  if (
+    length > 2 &&
+    values[length - 1] === values[length - 2] &&
+    values[length - 1] === values[length - 3]
+  ) {
+    const cutPrices = { ...prices };
+    const deleteKey = keys[length - 2];
+    delete cutPrices[deleteKey];
+    return cutPrices;
+  }
+
+  return prices;
+};
+
+const checkOne = async ({ name, url, prices }) => {
+  const html = await rp(url);
   const price = await scrape(html);
-  const updated = { ...item, price };
-  return updated;
+  const time = new Date().getTime();
+  const updatedPrices = simplifyPrices({ ...prices, [time]: price });
+
+  return { name, url, prices: { ...updatedPrices } };
 };
 
 const firebaseConfig = {
@@ -36,11 +57,11 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-const stuff = database.ref('stuff');
+const stuffRef = database.ref('stuff');
 
-let list = [];
+let list = {};
 
-stuff.once('value', snapshot => {
+stuffRef.once('value', snapshot => {
   list = snapshot.val();
 });
 
@@ -52,7 +73,11 @@ app.get('/', (req, res) => {
   const prices = list.map(thing => checkOne(thing));
 
   Promise.all(prices)
-    .then(done => res.json(done))
+    .then(done => {
+      list = done;
+      stuffRef.set({ ...done });
+      res.json(done);
+    })
     .catch(error => console.error(error));
 });
 
