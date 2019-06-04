@@ -1,0 +1,31 @@
+{
+  "stuff": [{
+      "name": "Kdo to byl?",
+      "url": "https://karetni-hry.heureka.cz/kdo-to-byl/"
+    },
+    {
+      "name": "Blood Rage",
+      "url": "https://stolni-hry.heureka.cz/rexhry-blood-rage-soumrak-bohu/"
+    },
+    {
+      "name": "Břink!",
+      "url": "https://stolni-hry.heureka.cz/rexhry-brink-velka-podzemni-loupez/"
+    },
+    {
+      "name": "Detroit: Become Human",
+      "url": "https://hry-pro-playstation-4.heureka.cz/detroit-become-human/"
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "url": "https://hry-pro-playstation-4.heureka.cz/red-dead-redemption-2/"
+    },
+    {
+      "name": "God of War",
+      "url": "https://hry-pro-playstation-4.heureka.cz/god-of-war/"
+    },
+    {
+      "name": "Marvel's Spider-Man",
+      "url": "https://hry-pro-playstation-4.heureka.cz/marvel-s-spider-man/"
+    }
+  ]
+}
