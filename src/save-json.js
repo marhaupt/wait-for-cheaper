@@ -3,7 +3,6 @@ const fs = require('fs');
 const checkOne = require('./checkOne.js');
 
 const main = () => {
-  console.log(list);
   const prices = list.map(thing => checkOne(thing));
 
   Promise.all(prices)
