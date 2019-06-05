@@ -4,7 +4,9 @@
   "description": "watch for prize drop",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/save-json.js",
+    "firebase": "node src/cron.js",
+    "api": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
