@@ -1,1 +1,60 @@
-[{"name":"Kdo to byl?","category":"bg","url":"https://karetni-hry.heureka.cz/kdo-to-byl/","prices":{"1559752607371":206,"1559752623731":206}},{"name":"Blood Rage","category":"bg","url":"https://stolni-hry.heureka.cz/rexhry-blood-rage-soumrak-bohu/","prices":{"1559752606535":1473,"1559752623606":1473}},{"name":"Břink!","category":"bg","url":"https://stolni-hry.heureka.cz/rexhry-brink-velka-podzemni-loupez/","prices":{"1559752606748":979,"1559752623523":979}},{"name":"Detroit: Become Human","category":"ps4","url":"https://hry-pro-playstation-4.heureka.cz/detroit-become-human/","prices":{"1559752606873":679,"1559752623838":679}},{"name":"Red Dead Redemption 2","category":"ps4","url":"https://hry-pro-playstation-4.heureka.cz/red-dead-redemption-2/","prices":{"1559752606748":949,"1559752623253":949}},{"name":"God of War","category":"ps4","url":"https://hry-pro-playstation-4.heureka.cz/god-of-war/","prices":{"1559752606405":849,"1559752623523":849}},{"name":"Marvel's Spider-Man","category":"ps4","url":"https://hry-pro-playstation-4.heureka.cz/marvel-s-spider-man/","prices":{"1559752607221":749,"1559752624128":749}}]
+[{
+  "name": "Kdo to byl?",
+  "category": "bg",
+  "url": "https://karetni-hry.heureka.cz/kdo-to-byl/",
+  "prices": {
+    "1559679815633": 206,
+    "1559754272387": 206
+  }
+}, {
+  "name": "Blood Rage",
+  "category": "bg",
+  "url": "https://stolni-hry.heureka.cz/rexhry-blood-rage-soumrak-bohu/",
+  "prices": {
+    "1559679815332": 1695,
+    "1559680021577": 1695,
+    "1559754272804": 1473
+  }
+}, {
+  "name": "Břink!",
+  "category": "bg",
+  "url": "https://stolni-hry.heureka.cz/rexhry-brink-velka-podzemni-loupez/",
+  "prices": {
+    "1559679815549": 979,
+    "1559754272165": 979
+  }
+}, {
+  "name": "Detroit: Become Human",
+  "category": "ps4",
+  "url": "https://hry-pro-playstation-4.heureka.cz/detroit-become-human/",
+  "prices": {
+    "1559679815549": 639,
+    "1559680021577": 639,
+    "1559754272804": 679
+  }
+}, {
+  "name": "Red Dead Redemption 2",
+  "category": "ps4",
+  "url": "https://hry-pro-playstation-4.heureka.cz/red-dead-redemption-2/",
+  "prices": {
+    "1559679815233": 949,
+    "1559754272495": 949
+  }
+}, {
+  "name": "God of War",
+  "category": "ps4",
+  "url": "https://hry-pro-playstation-4.heureka.cz/god-of-war/",
+  "prices": {
+    "1559679815739": 799,
+    "1559680021317": 799,
+    "1559754272043": 849
+  }
+}, {
+  "name": "Marvel's Spider-Man",
+  "category": "ps4",
+  "url": "https://hry-pro-playstation-4.heureka.cz/marvel-s-spider-man/",
+  "prices": {
+    "1559679815062": 749,
+    "1559754272804": 749
+  }
+}]
